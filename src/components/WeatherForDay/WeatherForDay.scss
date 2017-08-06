@@ -1,0 +1,12 @@
+@import '../../style/colours.scss';
+
+.WeatherForDay {
+  background-color: $background-color;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  &__day-name {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+}

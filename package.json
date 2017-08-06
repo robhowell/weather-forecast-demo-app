@@ -1,0 +1,70 @@
+{
+  "name": "weather-forecast-demo-app",
+  "version": "1.0.0",
+  "description": "5-day weather forecast using the openweatherapp.com API",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve dist --port 80",
+    "build": "webpack",
+    "dev": "webpack-dev-server --open",
+    "test": "jest",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robhowell/weather-forecast-demo-app.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "react",
+    "webpack"
+  ],
+  "author": "Rob Howell <rob@robhowell.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robhowell/weather-forecast-demo-app/issues"
+  },
+  "homepage": "https://github.com/robhowell/weather-forecast-demo-app#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.3",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "serve": "^6.0.6"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  }
+}

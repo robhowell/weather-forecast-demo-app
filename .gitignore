@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Output of build
+dist/
+
+# Mac folder info
+.DS_Store
