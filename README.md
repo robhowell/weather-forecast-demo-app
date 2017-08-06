@@ -75,7 +75,7 @@ After taking a quick look at the API documentation, I spent 5 minutes drawing th
 
 ### Data validation
 
-- I have created a basic validation function to check the server response (src/networking/isServerJsonValid.js) but in a real-world application I would normally use a validation library such as Joi.
+- I have created a basic validation function to check the server response (src/networking/isServerJsonValid.js) but in a real-world application I would implement more thorough validation.
 
 ### CI pipeline
 
@@ -115,5 +115,7 @@ After taking a quick look at the API documentation, I spent 5 minutes drawing th
 
 ### Technical debt
 
-- Within the WeatherForNext5Days component, I implemented a function named getWeatherDataDayArray() that will take the list of weather for every three hours and output an array of days that contain the weather info for each day. As an initial implementation, I used a reduce function to create an object then mapped this into an ordered array. Given more time, I would look at alternative ways to implement this functionality - it could be done more efficiently, but could also be made much more readable. Given that this code is run on the client side with a relatively small set of data, in this case I think readability is more important than performance.
+- Within the WeatherForNext5Days component, I implemented a function named getWeatherDataDayArray() that takes an array of weather for every three hours and outputs an array of days that contains the weather info for each day. As an initial implementation I used a reduce function to create an object, then mapped this into an ordered array. Given more time, I would look at alternative ways to implement this functionality - it could be done more efficiently, but could also be made more readable. Given that this code is run on the client side with a relatively small set of data, in this case I think readability is more important than performance.
+- More semantically accurate HTML tags could be used, e.g. the list of weather within each day could be built as an unordered list.
+- I initially built this app with a mobile-first design, but in a real-world app I would implement a responsive-design layout that makes better use of the space available in larger screen resolutions.
 - The Webpack configuration for this project is deliberately as simple as possible. In a real-world app there should be more work completed to strip unnecessary code (e.g. PropTypes) and to minify the JavaScript in the production build.
