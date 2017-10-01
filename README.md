@@ -22,6 +22,11 @@ This app was built and tested with the latest version of Node at the time it was
 
 ### How to run the dev build (includes hot reloading)
 ```
+npm install
+```
+
+### How to run the dev build (includes hot reloading)
+```
 npm run dev
 ```
 
