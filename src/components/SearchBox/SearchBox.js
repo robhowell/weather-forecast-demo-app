@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './SearchBox.scss';
+import SearchIcon from './SearchIcon';
 
 const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
   <div className="SearchBox">
@@ -14,7 +15,8 @@ const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
     />
 
     <button className="SearchBox__button" onClick={onButtonClick}>
-      🔍 Search
+      <SearchIcon />
+      <span className="visuallyhidden">Search</span>
     </button>
   </div>
 );
