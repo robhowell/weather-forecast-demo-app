@@ -13,7 +13,7 @@ const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
       type="text"
     />
 
-    <button className="SearchBox_button" onClick={onButtonClick}>
+    <button className="SearchBox__button" onClick={onButtonClick}>
       Search
     </button>
   </div>
