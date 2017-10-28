@@ -1,11 +1,34 @@
 @import '../../style/colours.scss';
 
 .SearchBox {
-  background-color: $background-color;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 20px;
+
+  &__text {
+    border: 1px solid #ddd;
+    color: inherit;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    width: 25%;
+  }
 
   &__button {
     font-family: inherit;
+    color: inherit;
+    font-size: 24px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fcfcfc;
+      border: 1px solid #bbb;
+    }
   }
 }

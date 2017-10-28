@@ -2,6 +2,7 @@
 
 .WeatherForDay {
   background-color: $background-color;
+  color: white;
   flex: 1;
   margin-bottom: 10px;
   margin-left: 5px;
@@ -16,9 +17,36 @@
     margin-right: 0;
   }
 
+  &:nth-child(1) {
+    background-color: #1f4371;
+  }
+
+  &:nth-child(2) {
+    background-color: #2962a9;
+  }
+
+  &:nth-child(3) {
+    background-color: #347bd5;
+  }
+
+  &:nth-child(4) {
+    background-color: #609ae1;
+  }
+
+  &:nth-child(5) {
+    background-color: #76a7e3;
+  }
+ 
   &__day-name {
-    font-size: 20px;
-    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   &__degrees {
@@ -27,5 +55,54 @@
     position: relative;
     top: -0.4em;
     vertical-align: baseline;
+  }
+
+  &__day-average-temp {
+    font-size: 36px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  &__items {
+    display: table;
+    width: 100%;
+  }
+
+  &__item {
+    display: table-row;
+
+    &-time,
+    &-temp,
+    &-main-weather {
+      display: table-cell;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 10px;
+    }
+
+    &:first-child {
+      .WeatherForDay__item-time,
+      .WeatherForDay__item-temp,
+      .WeatherForDay__item-main-weather {
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+
+    &:last-child {
+      .WeatherForDay__item-time,
+      .WeatherForDay__item-temp,
+      .WeatherForDay__item-main-weather {
+        padding-bottom: 0;
+      }
+    }
+
+    &-temp {
+      text-align: center;
+    }
+
+    &-main-weather {
+      text-align: right;
+    }
   }
 }

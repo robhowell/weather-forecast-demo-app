@@ -30,9 +30,11 @@ class Application extends Component {
     event.preventDefault();
 
     getWeatherForCity(this.state.searchText).then((serverResponse) => {
+      const cityAndCountryTitle = `${serverResponse.city.name}, ${serverResponse.city.country}`;
       this.setState({
-        cityAndCountryTitle: `${serverResponse.city.name}, ${serverResponse.city.country}`,
+        cityAndCountryTitle,
         errorMessage: '',
+        searchText: cityAndCountryTitle,
         serverResponse,
         showError: false
       });
@@ -48,25 +50,14 @@ class Application extends Component {
 
   render() {
     const { onButtonClick, onTextChange } = this;
-    const { cityAndCountryTitle, errorMessage, searchText, serverResponse, showError } = this.state;
-    const weatherList = serverResponse.list || [];
-
-    const renderedErrorMessage = showError ?
-      <ErrorMessage message={errorMessage} /> : null;
-
-    const renderedCityAndCountryTitle = cityAndCountryTitle !== '' ?
-      <h2 className="Application__cityAndCountryTitle">{cityAndCountryTitle}</h2> : null;
-
-    const renderedWeatherForNext5Days = weatherList.length ?
-      <WeatherForNext5Days weatherList={weatherList} /> : null;
+    const { errorMessage, searchText, serverResponse, showError } = this.state;
+    const weatherList = serverResponse.list || null;
 
     return (
       <div className="Application">
-        <h1 className="Application__title">5-day weather forecast</h1>
         <SearchBox {...{ onButtonClick, onTextChange, searchText }} />
-        { renderedErrorMessage }
-        { renderedCityAndCountryTitle }
-        { renderedWeatherForNext5Days }
+        { showError && <ErrorMessage message={errorMessage} /> }
+        { weatherList && <WeatherForNext5Days weatherList={weatherList} /> }
       </div>
     );
   }

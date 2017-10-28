@@ -3,7 +3,7 @@ import './SearchBox.scss';
 
 const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
   <div className="SearchBox">
-    <label className="SearchBox__title" htmlFor="SearchBox__text">Search for city: </label>
+    <label className="SearchBox__location visuallyhidden" htmlFor="SearchBox__text">Location</label>
 
     <input
       className="SearchBox__text"
@@ -14,7 +14,7 @@ const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
     />
 
     <button className="SearchBox__button" onClick={onButtonClick}>
-      Search
+      🔍 Search
     </button>
   </div>
 );
