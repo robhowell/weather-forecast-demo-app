@@ -22,14 +22,21 @@ class Application extends Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
+  componentWillMount() {
+    this.showWeatherForLocation('London, GB');
+  }
+
   onTextChange(event) {
     this.setState({ showError: false, searchText: event.target.value });
   }
 
   onButtonClick(event) {
+    this.showWeatherForLocation(this.state.searchText);
     event.preventDefault();
+  }
 
-    getWeatherForCity(this.state.searchText).then((serverResponse) => {
+  showWeatherForLocation(location) {
+    getWeatherForCity(location).then((serverResponse) => {
       const cityAndCountryTitle = `${serverResponse.city.name}, ${serverResponse.city.country}`;
       this.setState({
         cityAndCountryTitle,
