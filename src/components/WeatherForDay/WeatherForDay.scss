@@ -2,11 +2,30 @@
 
 .WeatherForDay {
   background-color: $background-color;
+  flex: 1;
   margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &__day-name {
     font-size: 20px;
     margin: 5px 0;
+  }
+
+  &__degrees {
+    font-size: 60%;
+    line-height: 0;
+    position: relative;
+    top: -0.4em;
+    vertical-align: baseline;
   }
 }

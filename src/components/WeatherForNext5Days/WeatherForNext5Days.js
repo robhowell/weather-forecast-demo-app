@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import WeatherForDay from '../WeatherForDay/WeatherForDay';
+import './WeatherForNext5Days.scss';
 
 /* Get the date part of the date-time string */
 const getWeatherDate = weatherItem => weatherItem.dt_txt.substring(0, 10);
