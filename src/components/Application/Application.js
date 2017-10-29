@@ -1,3 +1,4 @@
+import '../../favicons/favicons';
 import { Component } from 'react';
 import 'normalize.css';
 import './Application.scss';
