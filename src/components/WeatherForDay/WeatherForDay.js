@@ -17,6 +17,7 @@ const WeatherForDay = ({ date, weather }) => {
       <p key={weatherForDayData.dt_txt} className="WeatherForDay__item">
         <span className="WeatherForDay__item-time">{formattedTime}</span>
         <strong className="WeatherForDay__item-temp">{temp}<span className="WeatherForDay__degrees">&#8451;</span></strong>
+        <strong className="WeatherForDay__item-icon"><i className={`wi wi-owm-${weatherForDayData.weather[0].id}`} /></strong>
         <span className="WeatherForDay__item-main-weather">{mainWeather}</span>
       </p>
     );

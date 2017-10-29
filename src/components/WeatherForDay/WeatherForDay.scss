@@ -70,9 +70,15 @@
 
   &__item {
     display: table-row;
+    font-size: 15px;
+
+    @media (min-width: 850px) {
+      font-size: 13px;
+    }
 
     &-time,
     &-temp,
+    &-icon,
     &-main-weather {
       display: table-cell;
       padding-top: 10px;
@@ -83,6 +89,7 @@
     &:first-child {
       .WeatherForDay__item-time,
       .WeatherForDay__item-temp,
+      .WeatherForDay__item-icon,
       .WeatherForDay__item-main-weather {
         padding-top: 0;
         border-top: 0;
@@ -92,6 +99,7 @@
     &:last-child {
       .WeatherForDay__item-time,
       .WeatherForDay__item-temp,
+      .WeatherForDay__item-icon,
       .WeatherForDay__item-main-weather {
         padding-bottom: 0;
       }
@@ -99,6 +107,14 @@
 
     &-temp {
       text-align: center;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    &-icon {
+      text-align: center;
+      padding-left: 3px;
+      padding-right: 3px;
     }
 
     &-main-weather {
