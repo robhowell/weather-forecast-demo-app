@@ -3,6 +3,10 @@
 .SearchBox {
   margin-bottom: 20px;
   
+  @media (max-width: 549px) {
+    display: flex;
+  }
+
   &:after {
     content: "";
     display: table;
@@ -20,7 +24,10 @@
     font-weight: bold;
     height: 50px;
     padding: 10px;
-    width: 25%;
+    
+    @media (max-width: 549px) {
+      flex: 1;
+    }
 
     &:focus,
     &:active {
@@ -30,6 +37,10 @@
 
     &:active {
       border: 1px solid #aaa;
+    }
+
+    @media (min-width: 550px) {
+      width: 250px;
     }
   }
 
