@@ -4,7 +4,7 @@
 
 A live demo of this app is available to view at https://weather-forecast-demo-app.now.sh (hosted using the [now](https://zeit.co/now) hosting service).
 
-<a href="https://weather-forecast-demo-app.now.sh"><img src='./app-screenshot.png' style="width: 100%" /></a>
+<a href="https://weather-forecast-demo-app.now.sh"><img src='./weather-app-screenshots.jpg' style="width: 100%" /></a>
 
 ## How to use the app
 
