@@ -1,5 +1,7 @@
 # weather-forecast-demo-app
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/robhowell/weather-forecast-demo-app.svg)](https://greenkeeper.io/)
+
 ## Live demo
 
 A live demo of this app is available to view at https://weather-forecast-demo-app.now.sh (hosted using the [now](https://zeit.co/now) hosting service).
