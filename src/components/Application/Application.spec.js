@@ -2,6 +2,8 @@ import { shallow } from 'enzyme';
 import Application from './Application';
 import simplifiedMockResponse from '../../test-data/simplifiedMockResponse';
 
+jest.mock('../../favicons/favicons');
+
 describe('Application', () => {
   let rendered;
 
