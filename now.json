@@ -1,4 +1,5 @@
 {
   "version": 2,
+  "name": "weather-forecast-demo-app",
   "alias": "weather-forecast-demo-app.now.sh"
 }
