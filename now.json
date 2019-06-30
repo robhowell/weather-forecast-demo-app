@@ -1,5 +1,8 @@
 {
   "version": 2,
   "name": "weather-forecast-demo-app",
-  "alias": "weather-forecast-demo-app.now.sh"
+  "alias": "weather-forecast-demo-app.now.sh".
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+],
 }
