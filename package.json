@@ -1,6 +1,6 @@
 {
   "name": "weather-forecast-demo-app",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "5-day weather forecast using the openweatherapp.com API",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,10 @@
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
+    "@semantic-release/commit-analyzer": "^6.3.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.2",
+    "@semantic-release/release-notes-generator": "^7.3.0",
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "babel-plugin-react-require": "3.1.1",
