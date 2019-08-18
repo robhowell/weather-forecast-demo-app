@@ -1,6 +1,6 @@
 {
   "name": "weather-forecast-demo-app",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "5-day weather forecast using the openweatherapp.com API",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,12 @@
     "dev": "webpack-dev-server --open",
     "test": "jest",
     "lint": "eslint src",
-    "update-dependencies": "npx npm-check-updates --upgrade && npm i"
+    "update-dependencies": "npx npm-check-updates --upgrade && npm i",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robhowell/weather-forecast-demo-app.git"
+    "url": "https://github.com/robhowell/weather-forecast-demo-app.git"
   },
   "keywords": [
     "weather",
@@ -51,6 +52,7 @@
     "node-sass": "4.12.0",
     "react-test-renderer": "16.9.0",
     "sass-loader": "7.2.0",
+    "semantic-release": "^15.13.21",
     "style-loader": "1.0.0",
     "webpack": "4.39.2",
     "webpack-cli": "3.3.6",
