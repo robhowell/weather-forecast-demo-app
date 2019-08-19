@@ -60,7 +60,7 @@
     "semantic-release": "^15.13.21",
     "style-loader": "1.0.0",
     "webpack": "4.39.2",
-    "webpack-cli": "3.3.6",
+    "webpack-cli": "3.3.7",
     "webpack-dev-server": "3.8.0"
   },
   "dependencies": {
