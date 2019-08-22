@@ -4,39 +4,25 @@ on: [push]
 
 jobs:
   lint:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: lint
-      run:
-        npm install
-        npm lint
-       
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: lint
+        run: npm install
+          npm lint
+
   test:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: 12.x
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: unit tests
-      run:
-        npm install
-        npm test
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: unit tests
+        run: npm install
+          npm test
