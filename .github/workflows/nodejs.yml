@@ -3,7 +3,8 @@ name: Node CI
 on: [push]
 
 jobs:
-  Build, lint and test:
+  build-lint-and-test:
+    name: Build, lint and test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
