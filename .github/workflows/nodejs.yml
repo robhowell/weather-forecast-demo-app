@@ -3,21 +3,7 @@ name: Node CI
 on: [push]
 
 jobs:
-  build-lint-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: build, lint and test
-        run: npm ci
-          npm build
-          npm run lint
-          npm test
-
-  build-lint-and-test-separate-steps:
+  Build, lint and test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
