@@ -1,13 +1,16 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:jest/recommended'],
-  plugins: ['jest'],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': 'off',
-    "comma-dangle": ["error", "never"],
-    "max-len": ["error", 120]
+  extends: [
+    "semipretty",
+    "plugin:jest/recommended",
+    "plugin:react/recommended"
+  ],
+  plugins: ["jest"],
+  settings: {
+    react: {
+      version: "detect"
+    }
   },
-  'env': {
-    'jest/globals': true
+  rules: {
+    "react/react-in-jsx-scope": "off"
   }
 };

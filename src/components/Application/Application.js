@@ -11,7 +11,6 @@ class Application extends Component {
     super(props);
 
     this.state = {
-      cityAndCountryTitle: '',
       errorMessage: '',
       searchText: '',
       serverResponse: {},
@@ -36,23 +35,23 @@ class Application extends Component {
   }
 
   showWeatherForLocation(location) {
-    getWeatherForCity(location).then((serverResponse) => {
-      const cityAndCountryTitle = `${serverResponse.city.name}, ${serverResponse.city.country}`;
-      this.setState({
-        cityAndCountryTitle,
-        errorMessage: '',
-        searchText: cityAndCountryTitle,
-        serverResponse,
-        showError: false
+    getWeatherForCity(location)
+      .then(serverResponse => {
+        const cityAndCountryTitle = `${serverResponse.city.name}, ${serverResponse.city.country}`;
+        this.setState({
+          errorMessage: '',
+          searchText: cityAndCountryTitle,
+          serverResponse,
+          showError: false
+        });
+      })
+      .catch(error => {
+        this.setState({
+          errorMessage: error.message,
+          serverResponse: {},
+          showError: true
+        });
       });
-    }).catch((error) => {
-      this.setState({
-        cityAndCountryTitle: '',
-        errorMessage: error.message,
-        serverResponse: {},
-        showError: true
-      });
-    });
   }
 
   render() {
@@ -63,8 +62,8 @@ class Application extends Component {
     return (
       <div className="Application">
         <SearchBox {...{ onButtonClick, onTextChange, searchText }} />
-        { showError && <ErrorMessage message={errorMessage} /> }
-        { weatherList && <WeatherForNext5Days weatherList={weatherList} /> }
+        {showError && <ErrorMessage message={errorMessage} />}
+        {weatherList && <WeatherForNext5Days weatherList={weatherList} />}
       </div>
     );
   }
