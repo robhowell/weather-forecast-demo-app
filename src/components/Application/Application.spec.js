@@ -3,7 +3,10 @@ import Application from './Application';
 import simplifiedMockResponse from '../../test-data/simplifiedMockResponse';
 
 const fetchMock = async () => ({
-  json: () => ({ city: { name: 'Edinburgh', country: 'United Kingdom' }, list: [{}] })
+  json: () => ({
+    city: { name: 'Edinburgh', country: 'United Kingdom' },
+    list: [{}]
+  })
 });
 
 describe('Application', () => {
@@ -23,7 +26,9 @@ describe('Application', () => {
     const errorMessage = wrapper.find('ErrorMessage');
     expect(errorMessage.exists()).toBe(false);
 
-    const cityAndCountryTitle = wrapper.find('.Application__cityAndCountryTitle');
+    const cityAndCountryTitle = wrapper.find(
+      '.Application__cityAndCountryTitle'
+    );
     expect(cityAndCountryTitle.exists()).toBe(false);
   });
 

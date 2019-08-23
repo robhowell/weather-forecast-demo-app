@@ -3,7 +3,9 @@ import ErrorMessage from './ErrorMessage';
 
 describe('ErrorMessage', () => {
   it('should render specified message', () => {
-    const rendered = shallow(<ErrorMessage message="Sorry, the weather API is not responding" />);
+    const rendered = shallow(
+      <ErrorMessage message="Sorry, the weather API is not responding" />
+    );
     const expected = 'Sorry, the weather API is not responding';
     const actual = rendered.text();
     expect(actual).toEqual(expected);

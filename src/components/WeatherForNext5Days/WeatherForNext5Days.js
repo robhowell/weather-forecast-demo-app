@@ -17,7 +17,7 @@ const reduceWeatherListToDays = (previous, weatherItem) => {
 };
 
 /* Convert the weather list into an array of objects containing the items for each day */
-const getWeatherDataDayArray = (weatherList) => {
+const getWeatherDataDayArray = weatherList => {
   const weatherDates = weatherList.map(getWeatherDate);
   const uniqueWeatherDates = Array.from(new Set(weatherDates));
   const weatherDayData = weatherList.reduce(reduceWeatherListToDays, {});
@@ -33,15 +33,11 @@ const WeatherForNext5Days = ({ weatherList }) => {
   /* Slice array to only show 5 days, including today, as per popular 5-day online forecasts such as BBC weather */
   const fiveDaysWeatherData = weatherDayData.slice(0, 5);
 
-  const weatherDayArray = fiveDaysWeatherData.map(({ date, weather }) =>
+  const weatherDayArray = fiveDaysWeatherData.map(({ date, weather }) => (
     <WeatherForDay date={date} weather={weather} key={date} />
-  );
+  ));
 
-  return (
-    <div className="WeatherForNext5Days">
-      { weatherDayArray }
-    </div>
-  );
+  return <div className="WeatherForNext5Days">{weatherDayArray}</div>;
 };
 
 WeatherForNext5Days.propTypes = {
