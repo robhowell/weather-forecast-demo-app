@@ -4,7 +4,12 @@ import SearchIcon from './SearchIcon';
 
 const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
   <div className="SearchBox">
-    <label className="SearchBox__location visuallyhidden" htmlFor="SearchBox__text">Location</label>
+    <label
+      className="SearchBox__location visuallyhidden"
+      htmlFor="SearchBox__text"
+    >
+      Location
+    </label>
 
     <input
       className="SearchBox__text"

@@ -15,9 +15,12 @@ const fetchRequestObject = {
 /* In a real-world app, specific error responses should be thrown depending on the failure
 scenario, e.g. if the city cannot be found */
 const getWeatherForCity = city =>
-  fetch(`${apiEndpoint}?q=${city}&APPID=${appId}&units=metric`, fetchRequestObject)
+  fetch(
+    `${apiEndpoint}?q=${city}&APPID=${appId}&units=metric`,
+    fetchRequestObject
+  )
     .then(serverResponse => serverResponse.json())
-    .then((serverJson) => {
+    .then(serverJson => {
       if (!isServerJsonValid(serverJson)) {
         throw new Error('Sorry, the server did not return valid weather data');
       }
