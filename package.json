@@ -73,13 +73,13 @@
     "webpack-dev-server": "3.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5",
+    "@babel/runtime": "^7.5.5",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0",
     "serve": "^11.1.0"
   },
   "jest": {
