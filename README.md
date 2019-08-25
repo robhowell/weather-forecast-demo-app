@@ -23,6 +23,7 @@ A live demo of this app is available to view at https://weather-forecast-demo-ap
 This app was built and tested with the latest version of Node at the time it was written - 8.2.1 - and has not been tested on older versions. I have added an .npmrc file to the root of the project directory, so if you have nvm installed you can switch to version 8.2.1 by running "nvm use" at the command line.
 
 ### How to run the dev build (includes hot reloading)
+
 ```
 npm install
 ```
