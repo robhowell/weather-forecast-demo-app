@@ -21,7 +21,7 @@ class Application extends Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.showWeatherForLocation('London, GB');
   }
 

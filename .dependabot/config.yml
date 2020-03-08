@@ -12,5 +12,5 @@ update_configs:
           update_type: "semver:minor"
     commit_message:
       prefix: "fix"
-      prefix_development: "chore"
+      prefix_development: "fix"
       include_scope: true
