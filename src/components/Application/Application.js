@@ -21,7 +21,8 @@ class Application extends Component {
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
-  componentWillMount() {
+  // eslint-disable-next-line
+  UNSAFE_componentWillMount() {
     this.showWeatherForLocation('London, GB');
   }
 
