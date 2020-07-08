@@ -5,8 +5,8 @@ import simplifiedMockResponse from '../../test-data/simplifiedMockResponse';
 const fetchMock = async () => ({
   json: () => ({
     city: { name: 'Edinburgh', country: 'United Kingdom' },
-    list: [{}]
-  })
+    list: [{}],
+  }),
 });
 
 describe('Application', () => {
@@ -35,7 +35,7 @@ describe('Application', () => {
   it('should show ErrorMessage with specified message when state is set', () => {
     wrapper.setState({
       errorMessage: 'Test error message',
-      showError: true
+      showError: true,
     });
 
     const errorMessage = wrapper.find('ErrorMessage');
@@ -45,7 +45,7 @@ describe('Application', () => {
 
   it('should show WeatherForNext5Days when serverResponse is set in state', () => {
     wrapper.setState({
-      serverResponse: simplifiedMockResponse
+      serverResponse: simplifiedMockResponse,
     });
 
     const weatherForNext5Days = wrapper.find('WeatherForNext5Days');

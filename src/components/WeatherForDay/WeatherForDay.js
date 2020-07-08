@@ -5,14 +5,14 @@ import './WeatherForDay.scss';
 const WeatherForDay = ({ date, weather }) => {
   const dayName = moment(date).format('dddd');
   const tempsForEachTime = weather.map(
-    weatherForTimeData => weatherForTimeData.main.temp
+    (weatherForTimeData) => weatherForTimeData.main.temp
   );
   const totalTemp = tempsForEachTime.reduce(
     (previous, current) => current + previous
   );
   const averageTemp = Math.round(totalTemp / tempsForEachTime.length);
 
-  const weatherForDayItems = weather.map(weatherForDayData => {
+  const weatherForDayItems = weather.map((weatherForDayData) => {
     const temp = Math.round(weatherForDayData.main.temp);
     const formattedTime = moment(weatherForDayData.dt_txt).format('ha');
     const mainWeather = weatherForDayData.weather[0].main;
@@ -46,7 +46,7 @@ const WeatherForDay = ({ date, weather }) => {
 
 WeatherForDay.propTypes = {
   date: PropTypes.string.isRequired,
-  weather: PropTypes.arrayOf(PropTypes.object).isRequired
+  weather: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default WeatherForDay;
