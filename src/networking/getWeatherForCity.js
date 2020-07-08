@@ -7,20 +7,20 @@ const appId = '25353ec85fb1e8026d7cc450b14ae703';
 const fetchRequestObject = {
   method: 'GET',
   headers: {
-    Accept: 'application/json'
+    Accept: 'application/json',
   },
-  mode: 'cors'
+  mode: 'cors',
 };
 
 /* In a real-world app, specific error responses should be thrown depending on the failure
 scenario, e.g. if the city cannot be found */
-const getWeatherForCity = city =>
+const getWeatherForCity = (city) =>
   fetch(
     `${apiEndpoint}?q=${city}&APPID=${appId}&units=metric`,
     fetchRequestObject
   )
-    .then(serverResponse => serverResponse.json())
-    .then(serverJson => {
+    .then((serverResponse) => serverResponse.json())
+    .then((serverJson) => {
       if (!isServerJsonValid(serverJson)) {
         throw new Error('Sorry, the server did not return valid weather data');
       }

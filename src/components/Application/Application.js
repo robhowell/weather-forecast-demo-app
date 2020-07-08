@@ -14,7 +14,7 @@ class Application extends Component {
       errorMessage: '',
       searchText: '',
       serverResponse: {},
-      showError: false
+      showError: false,
     };
 
     this.onTextChange = this.onTextChange.bind(this);
@@ -37,20 +37,20 @@ class Application extends Component {
 
   showWeatherForLocation(location) {
     getWeatherForCity(location)
-      .then(serverResponse => {
+      .then((serverResponse) => {
         const cityAndCountryTitle = `${serverResponse.city.name}, ${serverResponse.city.country}`;
         this.setState({
           errorMessage: '',
           searchText: cityAndCountryTitle,
           serverResponse,
-          showError: false
+          showError: false,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({
           errorMessage: error.message,
           serverResponse: {},
-          showError: true
+          showError: true,
         });
       });
   }

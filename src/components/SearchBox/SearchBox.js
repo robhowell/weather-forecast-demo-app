@@ -29,7 +29,7 @@ const SearchBox = ({ onButtonClick, onTextChange, searchText }) => (
 SearchBox.propTypes = {
   onButtonClick: PropTypes.func.isRequired,
   onTextChange: PropTypes.func.isRequired,
-  searchText: PropTypes.string.isRequired
+  searchText: PropTypes.string.isRequired,
 };
 
 export default SearchBox;

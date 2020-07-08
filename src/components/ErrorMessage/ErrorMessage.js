@@ -4,11 +4,11 @@ import './ErrorMessage.scss';
 const ErrorMessage = ({ message }) => <p className="ErrorMessage">{message}</p>;
 
 ErrorMessage.defaultProps = {
-  message: 'An unknown error has occurred.'
+  message: 'An unknown error has occurred.',
 };
 
 ErrorMessage.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string,
 };
 
 export default ErrorMessage;

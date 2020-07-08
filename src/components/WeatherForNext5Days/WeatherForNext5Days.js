@@ -3,7 +3,7 @@ import WeatherForDay from '../WeatherForDay/WeatherForDay';
 import './WeatherForNext5Days.scss';
 
 /* Get the date part of the date-time string */
-const getWeatherDate = weatherItem => weatherItem.dt_txt.substring(0, 10);
+const getWeatherDate = (weatherItem) => weatherItem.dt_txt.substring(0, 10);
 
 /* Reduce the weather list to an object containing items for each day */
 const reduceWeatherListToDays = (previous, weatherItem) => {
@@ -12,19 +12,19 @@ const reduceWeatherListToDays = (previous, weatherItem) => {
 
   return {
     ...previous,
-    [weatherDate]: [...weatherItemsForCurrentDay, weatherItem]
+    [weatherDate]: [...weatherItemsForCurrentDay, weatherItem],
   };
 };
 
 /* Convert the weather list into an array of objects containing the items for each day */
-const getWeatherDataDayArray = weatherList => {
+const getWeatherDataDayArray = (weatherList) => {
   const weatherDates = weatherList.map(getWeatherDate);
   const uniqueWeatherDates = Array.from(new Set(weatherDates));
   const weatherDayData = weatherList.reduce(reduceWeatherListToDays, {});
 
-  return uniqueWeatherDates.map(weatherDate => ({
+  return uniqueWeatherDates.map((weatherDate) => ({
     date: weatherDate,
-    weather: weatherDayData[weatherDate]
+    weather: weatherDayData[weatherDate],
   }));
 };
 
@@ -41,7 +41,7 @@ const WeatherForNext5Days = ({ weatherList }) => {
 };
 
 WeatherForNext5Days.propTypes = {
-  weatherList: PropTypes.arrayOf(PropTypes.object).isRequired
+  weatherList: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export { getWeatherDataDayArray };
