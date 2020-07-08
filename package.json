@@ -76,7 +76,7 @@
     "@babel/runtime": "^7.10.4",
     "moment": "^2.27.0",
     "normalize.css": "^8.0.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
