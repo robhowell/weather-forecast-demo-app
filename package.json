@@ -62,7 +62,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "file-loader": "6.0.0",
     "html-webpack-plugin": "4.3.0",
-    "jest": "26.4.0",
+    "jest": "26.4.1",
     "node-sass": "4.14.1",
     "react-test-renderer": "16.13.1",
     "sass-loader": "9.0.3",
