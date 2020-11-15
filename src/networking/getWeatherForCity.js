@@ -2,7 +2,7 @@
 import isServerJsonValid from './isServerJsonValid';
 
 const apiEndpoint = 'https://api.openweathermap.org/data/2.5/forecast';
-const appId = '25353ec85fb1e8026d7cc450b14ae703';
+const appId = 'c83b50aff9a68abefa34e64895024d99';
 
 const fetchRequestObject = {
   method: 'GET',
