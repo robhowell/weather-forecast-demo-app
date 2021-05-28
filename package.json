@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@babel/plugin-transform-runtime": "7.14.3",
-    "@babel/preset-env": "7.14.2",
+    "@babel/preset-env": "7.14.4",
     "@babel/preset-react": "7.13.13",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
