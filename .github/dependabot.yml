@@ -1,0 +1,23 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: webpack
+    versions:
+    - 5.20.0
+    - 5.34.0
+  - dependency-name: "@babel/runtime"
+    versions:
+    - 7.12.17
+    - 7.13.17
+  - dependency-name: css-loader
+    versions:
+    - 5.2.4
+  commit-message:
+    prefix: fix
+    prefix-development: fix
+    include: scope
