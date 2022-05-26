@@ -32,7 +32,7 @@
   "homepage": "https://github.com/robhowell/weather-forecast-demo-app#readme",
   "devDependencies": {
     "@babel/core": "7.17.12",
-    "@babel/plugin-transform-runtime": "7.17.12",
+    "@babel/plugin-transform-runtime": "7.18.2",
     "@babel/preset-env": "7.17.12",
     "@babel/preset-react": "7.17.12",
     "@semantic-release/changelog": "^5.0.1",
