@@ -80,7 +80,7 @@
     "prop-types": "^15.8.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "serve": "^13.0.2"
+    "serve": "^14.0.1"
   },
   "jest": {
     "moduleNameMapper": {
