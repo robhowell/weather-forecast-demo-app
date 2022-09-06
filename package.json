@@ -73,7 +73,7 @@
     "webpack-dev-server": "4.10.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.18.9",
+    "@babel/runtime": "^7.19.0",
     "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
     "prettier": "^2.7.1",
